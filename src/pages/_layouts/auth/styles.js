@@ -14,11 +14,6 @@ export const Content = styled.div`
   max-width: 315px;
   text-align: center;
 
-  img {
-    width: 100px;
-    height: 100px;
-  }
-
   form {
     display: flex;
     flex-direction: column;
