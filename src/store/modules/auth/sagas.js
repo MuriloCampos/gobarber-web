@@ -17,7 +17,9 @@ export function* signIn({ payload }) {
     const { token, user } = response.data;
 
     if (!user.provider) {
-      toast.error('Usuario nao e prestador');
+      toast.error(
+        'Usuário não é prestador de serviço. Por favor utilize o App do GoBarber!'
+      );
       yield put(signFailure());
       return;
     }
@@ -28,7 +30,7 @@ export function* signIn({ payload }) {
 
     history.push('/dashboard');
   } catch (err) {
-    toast.error('Falha na autenticacao, verifique seus dados');
+    toast.error('Falha na autenticação, verifique seus dados');
     yield put(signFailure());
   }
 }
